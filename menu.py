@@ -40,7 +40,7 @@ while True:
             elif option == 5:
                 advanced.options()
             else:
-                sys.exit("Good Bye!")
+                sys.exit("GoodBye!")
 
     except ValueError:
         print("Invalid input. Please enter a number.")
