@@ -20,7 +20,7 @@ def main():
     try:
         multiple_condition(dbname, tablename)
     except EOFError:
-        sys.exit("exiting ...")
+        return
 
 def multiple_condition(dbname, tablename):
     conditions, values = user_inputs()
