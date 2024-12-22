@@ -34,4 +34,4 @@ The project is designed with a user-friendly CLI interface and includes features
 - `--dbname`: The name of the SQLite database file.
 - `--tablename`: The name of the table in the database (default: `weather`).
 - `--apikey`: Your API key from the Open Weather API.
-2. Ensure all required modules (`view_records.py`, `insert_records.py`, `update_records.py`, `delete_records.py`, `advanced_query.py`, `nested_query.py`, and `window_function.py`)  are in the same directory as `menu.py` before running the application.
+2. Ensure all required modules (`view_records.py`, `insert_records.py`, `update_records.py`, `delete_records.py`, `advanced_query.py`, `nested_query.py`, `go.py`, and `window_function.py`)  are in the same directory as `menu.py` before running the application.
