@@ -27,18 +27,19 @@ def options():
             if option not in range(1, 6):
                 print("Invalid choice. Please select a number between 1 and 5.")
             else:
-                if option == 1:
-                    multiple_conditions.multiple_condition(args.dbname, args.tablename)
-                elif option == 2:
-                    window_function.window_function(args.dbname, args.tablename)
-                elif option == 3:
-                    nested_query.nested_query(args.dbname, args.tablename)
-                elif option == 4:
-                    go.go(args.dbname, args.tablename)
-                elif option == 5:
-                    return
-                else:
-                    raise ValueError
+                match option:
+                    case 1:
+                        multiple_conditions.multiple_condition(args.dbname, args.tablename)
+                    case 2:
+                        window_function.window_function(args.dbname, args.tablename)
+                    case 3:
+                        nested_query.nested_query(args.dbname, args.tablename)
+                    case 4:
+                        go.go(args.dbname, args.tablename)
+                    case 5:
+                        return
+                    case _:
+                        raise ValueError
 
         except ValueError:
             continue
