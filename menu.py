@@ -30,18 +30,19 @@ while True:
         if option not in range(1, 7):
             print("Please select a number between 1 and 6.")
         else:
-            if option == 1:
-                view_records.view_records(args.dbname, args.tablename)
-            elif option == 2:
-                insert_records.insert_records(args.dbname, args.apikey, args.tablename)
-            elif option == 3:
-                update_records.update_records(args.dbname, args.tablename)
-            elif option == 4:
-                delete_records.choice(args.dbname, args.tablename)
-            elif option == 5:
-                advanced.options()
-            else:
-                sys.exit("Goodbye!")
+            match option:
+                case 1:
+                    view_records.view_records(args.dbname, args.tablename)
+                case 2:
+                    insert_records.insert_records(args.dbname, args.apikey, args.tablename)
+                case 3:
+                    update_records.update_records(args.dbname, args.tablename)
+                case 4:
+                    delete_records.choice(args.dbname, args.tablename)
+                case 5:
+                    advanced.options()
+                case _:
+                    sys.exit("Goodbye!")
     except EOFError:
         print('\n')
         sys.exit("Operation terminated by user. Goodbye!")
